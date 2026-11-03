@@ -1,0 +1,10 @@
+# Bake the full repo (including .git) into the commit image; drop only build outputs and cruft.
+/out*
+*.o
+*.a
+**/__pycache__/
+.DS_Store
+*.swp
+*~
+.idea
+.vscode

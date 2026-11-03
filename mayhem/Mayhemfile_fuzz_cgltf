@@ -1,0 +1,10 @@
+project: savantenvs/filament
+target: fuzz_cgltf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cgltf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cgltf
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_cgltf/fuzz_cgltf.dict
+    timeout: 10

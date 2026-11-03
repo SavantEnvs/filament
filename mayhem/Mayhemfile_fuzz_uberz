@@ -1,0 +1,10 @@
+project: savantenvs/filament
+target: fuzz_uberz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_uberz/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_uberz
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_uberz/fuzz_uberz.dict
+    timeout: 10
