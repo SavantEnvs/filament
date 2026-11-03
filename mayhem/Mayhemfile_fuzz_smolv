@@ -1,0 +1,9 @@
+project: savantenvs/filament
+target: fuzz_smolv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_smolv/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_smolv
+    libfuzzer: true
+    timeout: 10

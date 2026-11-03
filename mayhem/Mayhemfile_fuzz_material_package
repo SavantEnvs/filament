@@ -1,0 +1,9 @@
+project: savantenvs/filament
+target: fuzz_material_package
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_material_package/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_material_package
+    libfuzzer: true
+    timeout: 10

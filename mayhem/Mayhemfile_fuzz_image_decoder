@@ -1,0 +1,10 @@
+project: savantenvs/filament
+target: fuzz_image_decoder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_image_decoder/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_image_decoder
+    libfuzzer: true
+    dictionary: /mayhem/third_party/libpng/contrib/oss-fuzz/png.dict
+    timeout: 10
